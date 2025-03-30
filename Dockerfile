@@ -18,4 +18,4 @@ RUN chmod +x /config.sh && \
 
 RUN mv ./config.json /vault/config/config.json
 
-CMD if [ "$ENV" = "dev" ]; then vault server --dev-root-token-id=${DEV_ROOT_TOKEN_ID} --dev; else vault server -config=/vault/config/config.json; fi
+CMD if [ "$ENV" = "dev" ]; then vault server --dev-root-token-id=${DEV_ROOT_TOKEN_ID} --dev -config=/vault/config/config.json; else vault server -config=/vault/config/config.json; fi
