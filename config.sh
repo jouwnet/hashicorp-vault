@@ -9,4 +9,3 @@ echo "
   \"disable_mlock\": true
 }
 " > config.json
-d
